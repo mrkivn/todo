@@ -17,7 +17,6 @@ import { Trash2, Plus, Loader2, AlertCircle } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { insertTodoSchema, type InsertTodo, type Todo } from '@shared/schema';
 import {
   Form,
   FormControl,
