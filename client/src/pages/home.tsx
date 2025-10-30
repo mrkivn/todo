@@ -26,6 +26,20 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+import { z } from 'zod';
+
+// Todo types and schemas (inline)
+const todoSchema = z.object({
+  id: z.string(),
+  text: z.string().min(1, "Task cannot be empty"),
+  completed: z.boolean(),
+  timestamp: z.number(),
+});
+
+const insertTodoSchema = todoSchema.omit({ id: true });
+
+type Todo = z.infer<typeof todoSchema>;
+type InsertTodo = z.infer<typeof insertTodoSchema>;
 
 export default function Home() {
   const [todos, setTodos] = useState<Todo[]>([]);
