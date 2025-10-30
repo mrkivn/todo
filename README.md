@@ -55,26 +55,32 @@ The app uses these environment variables (already configured in Replit Secrets):
 ## Tech Stack
 
 - **Frontend**: React with TypeScript
-- **Database**: Firebase Firestore
-- **Styling**: Tailwind CSS + Shadcn UI
+- **Database**: Firebase Firestore (cloud-hosted NoSQL)
+- **Styling**: Tailwind CSS + Shadcn UI components
 - **Build Tool**: Vite
-- **Backend**: Express (for serving)
+- **Routing**: Wouter (lightweight React router)
 
 ## Project Structure
 
 ```
 ├── client/
 │   ├── src/
-│   │   ├── components/     # Reusable UI components
+│   │   ├── components/     # Reusable UI components (Shadcn/Radix)
+│   │   ├── hooks/          # Custom React hooks
 │   │   ├── lib/
-│   │   │   └── firebase.ts # Firebase configuration
+│   │   │   ├── firebase.ts # Firebase configuration & initialization
+│   │   │   └── utils.ts    # Utility functions
 │   │   ├── pages/
-│   │   │   └── home.tsx    # Main todo app page
+│   │   │   ├── home.tsx    # Main todo app page
+│   │   │   └── not-found.tsx
+│   │   ├── App.tsx         # App component with routing
+│   │   ├── main.tsx        # App entry point
 │   │   └── index.css       # Global styles
+│   ├── public/
 │   └── index.html
-├── shared/
-│   └── schema.ts           # TypeScript types and schemas
-└── server/                 # Express server
+├── vite.config.ts          # Vite configuration
+├── tailwind.config.ts      # Tailwind CSS configuration
+└── .env.example            # Environment variables template
 ```
 
 ## Development
