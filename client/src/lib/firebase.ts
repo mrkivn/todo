@@ -4,12 +4,12 @@ import { getFirestore } from 'firebase/firestore';
 
 // Firebase config from environment variables
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
-  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
-  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  apiKey: "AIzaSyC4Vc3kXa-t0iA93GFdqamC8Y7_MkNtdd8",
+  authDomain: "todo-5f5a5.firebaseapp.com",
+  projectId: "todo-5f5a5",
+  storageBucket: "todo-5f5a5.firebasestorage.app",
+  messagingSenderId: "978475447041",
+  appId: "1:978475447041:web:84308473513b3a4beb2100"
 };
 
 // Initialize Firebase
